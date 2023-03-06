@@ -126,7 +126,7 @@ li.folder-root.open>ul{
 .title{
     margin-bottom: 1px solid black;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px !important;
     margin: 0 auto;
     text-align: center;
     background-color: #aaa;
@@ -168,34 +168,20 @@ li.folder-root.open>ul{
  }
 
   
-  .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-    height: 50vh;
-  }
-
   .radios{
     display: flex;
     flex-direction: row;
   }
 
-  .AddInterface{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid red;
-  }
+  
 
-  .box{
-    width:280px;
-    border: 1px solid black;
-  }
+ 
 
   .data-box  *{
     margin-top: 6px;
     margin-bottom: 6px;
     padding-left: 3px;
+    text-align: left;
   }
   #systems{
     width: 150px;

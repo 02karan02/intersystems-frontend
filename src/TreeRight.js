@@ -11,53 +11,111 @@ import {
   MDBCollapse
 } from 'mdb-react-ui-kit';
 
+import styled from 'styled-components';
+const Tab = styled.button`
+  font-size: 20px;
+  padding: 10px 60px;
+  cursor: pointer;
+  opacity: 0.6;
+  background: white;
+  border: 0;
+  outline: 0;
+  ${({ active }) =>
+    active &&
+    `
+    border-bottom: 2px solid black;
+    opacity: 1;
+  `}
+`;
+const ButtonGroup = styled.div`
+  display: flex;
+`;
+
+const types = ['Navigate Interface', 'Add System', 'Add Interface', 'Generate'];
+
+
+
 function TreeRight(){
   const [showNavColor, setShowNavColor] = useState(false);
   const [showNavColorSecond, setShowNavColorSecond] = useState(false);
   const [showNavColorThird, setShowNavColorThird] = useState(false);
-
+  const [active, setActive] = useState(types[0]);
     return (
         <> 
         <div className="left-container">
-
-        <MDBNavbar expand='lg' light style={{ backgroundColor: '#e3f2fd' }}>
-        <MDBContainer fluid>
-          <MDBNavbarBrand href='#'>Navbar</MDBNavbarBrand>
-          <MDBNavbarToggler
-            type='button'
-            data-target='#navbarColor02'
-            aria-controls='navbarColor02'
-            aria-expanded='false'
-            aria-label='Toggle navigation'
-            onClick={() => setShowNavColorThird(!showNavColorThird)}
+        <ButtonGroup>
+        {types.map(type => (
+          <Tab
+            key={type}
+            active={active === type}
+            onClick={() => setActive(type)}
           >
-            <MDBIcon icon='bars' fas />
-          </MDBNavbarToggler>
-          <MDBCollapse show={showNavColorThird} navbar>
-            <MDBNavbarNav className='me-auto mb-2 mb-lg-0'>
-              {/* <MDBNavbarItem className='active'>
-                <MDBNavbarLink aria-current='page' href='#'>
-                  Home
-                </MDBNavbarLink>
-              </MDBNavbarItem> */}
-              <MDBNavbarItem>
-                <MDBNavbarLink href='#'>Navigate Interface</MDBNavbarLink>
-              </MDBNavbarItem>
-              <MDBNavbarItem>
-                <MDBNavbarLink href='#'>Add System</MDBNavbarLink>
-              </MDBNavbarItem>
-              <MDBNavbarItem>
-                <MDBNavbarLink href='#'>Add Interface</MDBNavbarLink>
-              </MDBNavbarItem>
-              <MDBNavbarItem>
-                <MDBNavbarLink href='#'>Generate</MDBNavbarLink>
-              </MDBNavbarItem>
-            </MDBNavbarNav>
-          </MDBCollapse>
-        </MDBContainer>
-      </MDBNavbar>
-        </div>
-        </>
+            {type}
+          </Tab>
+        ))}
+      </ButtonGroup>
+      {console.log(active)}
+      {active == "Add System" ? <div id="AddSystem" class="tabcontent">
+            
+    <p>System Name:</p>
+            <input />
+            <p>Description:</p>
+            <textarea rows="4" cols="30">
+            </textarea>
+            <button class="sub">Submit</button>
+      </div>:null}
+      {active == "Add Interface" ? <div id="AddInterface" class="tabcontent data-box">
+      {console.log("inside")}
+     
+      <div class="box">
+    <p class="title">City Statistics</p>
+    <p>Name:</p>
+    <input type="text" />
+    <p>Status:</p>
+    <p>Loading</p>
+    <p>From System:</p>
+    <select name="system" id="systems">
+      <option value="Inter">InterSystems</option>
+      <option value="Rhapsody">Rhapsody</option>
+    </select>
+    <p>To System:</p>
+    <select name="system" id="systems">
+      <option value="Inter">InterSystems</option>
+      <option value="Rhapsody">Rhapsody</option>
+    </select>
+    <p>Component Type:</p>
+    <div class="radios">
+      <input type="radio" name="comp" id="html" />
+      <label for="html">Service</label>
+      <br />
+      <input type="radio" name="comp" id="css" />
+      <label for="css">Process</label>
+      <br />
+      <input type="radio" name="comp" id="javascript" />
+      <label>Operation </label>
+    </div>
+    <p>Message Type:</p>
+    <div class="radios">
+      <input type="radio" name="message" id="html" />
+      <label for="hl7">HL7</label>
+      <br />
+      <input type="radio" name="message" id="css" />
+      <label for="web">Web Service</label>
+      <br />
+      <input type="radio" name="message" id="javascript" />
+      <label for="fhir">FHIR</label>
+    </div>
+    <p>Message Event:</p>
+    <input type="text" />
+    <button>Submit</button>
+      </div>
+      
+      </div>:null}
+      {active == "Generate" ?  <div id="Generate" class="tabcontent">
+            <h3>This is fourth</h3>
+      </div>:null}
+      </div>
+      </>
     );
 }
 

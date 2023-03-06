@@ -63,3 +63,99 @@
 .project-title{
   margin-bottom: 20px;
 }
+
+.container{
+  padding: 50px;
+  border-right: 1px solid black;
+  width: 250px;
+  background-color: rgb(156, 168, 235);
+  height: 100%;
+}
+
+
+
+.navigation-bar{
+  width: -webkit-fill-available;
+  margin: 3px;
+
+}
+.navi{
+  display: flex;
+  flex-direction: column;
+  
+  /* margin-top: 10px; */
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: row;
+}
+
+.tab{
+  display: inline-block;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  /* background-color: #f1f1f1; */
+}
+
+.button-tab{
+  border-radius: 5px;
+  border: 0.5px solid transparent ;
+  background-color: #dddddd;
+}
+
+
+.radios{
+  display: flex;
+  flex-direction: row;
+}
+
+.AddInterface{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  padding: 20px;
+}
+
+.box{
+  width:280px;
+  border: 1px solid black;
+}
+
+.data-box  *{
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 3px;
+}
+#systems{
+  width: 150px;
+}
+
+.title{
+  margin-top: 0px;
+  margin-left: -3px;
+}
+
+#AddSystem {
+  width: 400px;
+  text-align: left;
+  border: 1px solid black;
+  margin-top: 20px;
+  padding: 30px;
+}
+
+#AddSystem *{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sub{
+  display: block;
+}
+
+.container{
+  height: 100vh;
+}
