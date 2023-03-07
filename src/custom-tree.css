@@ -1,0 +1,21 @@
+#treeWrapper {
+    /* height: 400px;
+    width: 100%; */
+    background-color: rgb(173, 210, 210);
+  }
+  
+  .node__root > circle {
+   fill:#f8e327f3;
+    stroke: rgb(16, 189, 16);
+  }
+  
+  .node__leaf > circle {
+    fill: rgba(17, 157, 17, 0.462);
+    stroke: rgb(3, 49, 3);
+  }
+
+  .rd3t-g rd3t-g-1b7b08a2-ad16-497f-92d6-005a9c6a257d 
+  {
+    transform: translate(50,250) scale(1,1);
+    
+  } 
