@@ -188,3 +188,13 @@
     font-size: 20px;
     cursor: pointer;
 } 
+
+.generate-container{
+  margin: 30px;
+}
+div#AddInterface {
+    margin: 30px;
+}
+div#AddSystem {
+    margin: 30px;
+}
