@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import Generate from './Generate.js';
 import styled from 'styled-components';
-import {
-  MDBNavbar,
-  MDBContainer,
-  MDBIcon,
-  MDBNavbarNav,
-  MDBNavbarItem,
-  MDBNavbarLink,
-  MDBNavbarToggler,
-  MDBNavbarBrand,
-  MDBCollapse
-} from 'mdb-react-ui-kit';
+import Navigate from './Navigate.js';
+// import {
+//   MDBNavbar,
+//   MDBContainer,
+//   MDBIcon,
+//   MDBNavbarNav,
+//   MDBNavbarItem,
+//   MDBNavbarLink,
+//   MDBNavbarToggler,
+//   MDBNavbarBrand,
+//   MDBCollapse
+// } from 'mdb-react-ui-kit';
 
 
 const Tab = styled.button`
@@ -38,9 +39,9 @@ const types = ['Navigate Interface', 'Add System', 'Add Interface', 'Generate'];
 
 
 function TreeRight(){
-  const [showNavColor, setShowNavColor] = useState(false);
-  const [showNavColorSecond, setShowNavColorSecond] = useState(false);
-  const [showNavColorThird, setShowNavColorThird] = useState(false);
+  // const [showNavColor, setShowNavColor] = useState(false);
+  // const [showNavColorSecond, setShowNavColorSecond] = useState(false);
+  // const [showNavColorThird, setShowNavColorThird] = useState(false);
   const [active, setActive] = useState(types[0]);
     return (
         <> 
@@ -57,6 +58,11 @@ function TreeRight(){
         ))}
       </ButtonGroup>
       {console.log(active)}
+      {active === "Navigate Interface" ?<>
+            <div id="navigate-interface" className="navigate">
+                    <Navigate/>
+            </div>
+      </>:null}
       {active === "Add System" ? <div id="AddSystem" class="tabcontent">
             
             <p>System Name:</p>
