@@ -13,6 +13,8 @@ const FILE_ICONS = {
 
 const StyledTree = styled.div`
   line-height: 1.5;
+  background-color:#d8bfd8;
+  width:auto;
 `;
 
 const StyledFile = styled.div`
@@ -108,7 +110,7 @@ Tree.Folder = Folder;
 const structure = [
   {
     type: "folder",
-    name: "src",
+    name: "PACSGear",
     childrens: [
       // {
       //   type: "folder",
@@ -119,16 +121,37 @@ const structure = [
       //   ]
       // },
       { type: "file", name: "index.js" },
-      { type: "file", name: "index.html" }
+      { type: "file", name: "Epic_To_PACSGear_ORM_HL7_Send" },
+      { type: "file", name: "PACSGear_Router" },
+      { type: "file", name: "From_PACSGear_Epic_MDM_HL7" },
+      { type: "file", name: "From_Epic_PACSGear_ORM_HL7" }
     ]
   },
-  { type: "file", name: "package.json" }
+  {
+    type: "folder",
+    name: "ADT",
+    childrens: [
+      // {
+      //   type: "folder",
+      //   name: "Components",
+      //   childrens: [
+      //     { type: "file", name: "Modal.js" },
+      //     { type: "file", name: "Modal.css" }
+      //   ]
+      // },
+      { type: "file", name: "index.html" },
+      { type: "file", name: "Epic_To_ADT_ORM_HL7_Send" },
+      { type: "file", name: "ADT_Router" },
+      { type: "file", name: "From_ADT_Epic_MDM_HL7" },
+      { type: "file", name: "From_Epic_ADT_ORM_HL7" }
+    ]
+  }
 ];
 
 export default function TreeLeft() {
   return (
     <div className="App right-container">
-      <h5 className="project-title">Project</h5>
+      <h5 className="project-title">FRIMLEY</h5>
       <Tree data={structure} />
     </div>
   );

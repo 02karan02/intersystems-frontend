@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Generate from './Generate.js';
+import styled from 'styled-components';
 import {
   MDBNavbar,
   MDBContainer,
@@ -11,7 +13,7 @@ import {
   MDBCollapse
 } from 'mdb-react-ui-kit';
 
-import styled from 'styled-components';
+
 const Tab = styled.button`
   font-size: 20px;
   padding: 10px 60px;
@@ -55,24 +57,24 @@ function TreeRight(){
         ))}
       </ButtonGroup>
       {console.log(active)}
-      {active == "Add System" ? <div id="AddSystem" class="tabcontent">
+      {active === "Add System" ? <div id="AddSystem" class="tabcontent">
             
-    <p>System Name:</p>
+            <p>System Name:</p>
             <input />
             <p>Description:</p>
-            <textarea rows="4" cols="30">
+            <textarea rows="3" cols="25">
             </textarea>
+    
             <button class="sub">Submit</button>
       </div>:null}
-      {active == "Add Interface" ? <div id="AddInterface" class="tabcontent data-box">
+      {active === "Add Interface" ? <div id="AddInterface" class="tabcontent data-box">
       {console.log("inside")}
      
       <div class="box">
     <p class="title">City Statistics</p>
     <p>Name:</p>
     <input type="text" />
-    <p>Status:</p>
-    <p>Loading</p>
+    <p>Status: Loading..</p>
     <p>From System:</p>
     <select name="system" id="systems">
       <option value="Inter">InterSystems</option>
@@ -107,12 +109,12 @@ function TreeRight(){
     </div>
     <p>Message Event:</p>
     <input type="text" />
-    <button>Submit</button>
+    <button className="interface-button">Submit</button>
       </div>
       
       </div>:null}
-      {active == "Generate" ?  <div id="Generate" class="tabcontent">
-            <h3>This is fourth</h3>
+      {active === "Generate" ?  <div id="Generate" class="tabcontent">
+           <Generate/>
       </div>:null}
       </div>
       </>
