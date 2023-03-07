@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import Generate from './Generate.js';
 import Graphical from './Graphical';
 import styled from 'styled-components';
+
+import Navigate from './Navigate.js';
+
 // import {
 //   MDBNavbar,
 //   MDBContainer,
@@ -38,15 +41,18 @@ const types = ['Navigate Interface', 'Add System', 'Add Interface', 'Generate'];
 
 
 
-function TreeRight() {
-  const [showNavColor, setShowNavColor] = useState(false);
-  const [showNavColorSecond, setShowNavColorSecond] = useState(false);
-  const [showNavColorThird, setShowNavColorThird] = useState(false);
+
+function TreeRight(){
+  // const [showNavColor, setShowNavColor] = useState(false);
+  // const [showNavColorSecond, setShowNavColorSecond] = useState(false);
+  // const [showNavColorThird, setShowNavColorThird] = useState(false);
+
   const [active, setActive] = useState(types[0]);
   return (
     <>
       <div className="left-container">
         <ButtonGroup>
+
           {types.map(type => (
             <Tab
               key={type}

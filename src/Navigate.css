@@ -1,0 +1,20 @@
+#treeWrapper {
+    height: 400px;
+    width: 100%;
+    background-color: rgb(173, 210, 210);
+   
+}
+
+.node__root>circle {
+    fill: #f8e327f3;
+    stroke: rgb(16, 189, 16);
+    
+}
+
+
+.node__leaf>circle {
+    fill: rgba(17, 157, 17, 0.462);
+    stroke: rgb(3, 49, 3);
+    
+}
+ 
